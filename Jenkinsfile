@@ -1,9 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Authinticate Gcloud') {
             steps {
-                echo "Git Project Build"
+                echo "Authenticate gcloud"
+                sh gcloud auth login
             }
         }
         stage('Deliver') {
