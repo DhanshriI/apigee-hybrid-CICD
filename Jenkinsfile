@@ -4,8 +4,9 @@ pipeline {
         stage('Authinticate Gcloud') {
             steps {
                 echo "Authenticate gcloud"
-                sh gcloud version
-                sh gcloud auth login
+                sh '''
+                gcloud version
+                '''
             }
         }
         stage('Deliver') {
