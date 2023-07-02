@@ -4,11 +4,10 @@ pipeline {
         stage('Authinticate Gcloud') {
             steps {
                 echo "Authenticate gcloud"
-		        withEnv(["PATH+GCLOUD=${tool 'Gcloud-SDK'}/bin"]) {
+		withEnv(['GCLOUD_PATH=C:\Users\2168557\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin']) {
                 bat 'gcloud version'
                 }
             }
         }
     }
 }
-
