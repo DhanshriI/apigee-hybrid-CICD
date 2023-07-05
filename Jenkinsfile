@@ -23,6 +23,7 @@ pipeline {
             }
         stage("Set-up Management Plane") {
             steps{
+                echo "Management Plane set-up"
                 bat 'Create-Org-And-Env.bat'
                 bat 'Install-Apigee-Hybrid-Software.bat'
                 bat 'Create-Service-Account.bat'
@@ -33,8 +34,10 @@ pipeline {
         }
          stage("Install Runtime Plane") {
             steps{
+                echo "Install Runtime Plane"
                 bat 'Install-Apigee-Hybrid-Runtime.bat'
-            }
-        }   
+                }
+            }   
+        }
     }
 }
