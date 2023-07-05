@@ -8,7 +8,6 @@ pipeline {
         CLOUDSDK_CORE_PROJECT='';
         CLIENT_EMAIL=''
         GCLOUD_CREDS=crdentials('gcloud-creds')
-
     }
     stages {
         stage("Authinticate Gcloud") {
@@ -21,6 +20,7 @@ pipeline {
                 }
                 }
             }
+        }
         stage("Set-up Management Plane") {
             steps{
                 echo "Management Plane set-up"
@@ -36,8 +36,7 @@ pipeline {
             steps{
                 echo "Install Runtime Plane"
                 bat 'Install-Apigee-Hybrid-Runtime.bat'
-                }
-            }   
-        }
+            }
+        }   
     }
 }
