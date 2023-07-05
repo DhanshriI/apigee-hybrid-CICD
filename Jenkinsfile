@@ -4,22 +4,37 @@ pipeline {
         string(defaultValue: "Unit", description: 'Which environment you want to deploy?', name: 'Environment')
         choice(choices: ['Install', 'Upgrade','Rollback'], description: 'Action to perform?', name: 'Activity')
     }
-    /*environment {
+    environment {
         CLOUDSDK_CORE_PROJECT='';
         CLIENT_EMAIL=''
         GCLOUD_CREDS=crdentials('gcloud-creds')
 
-    }*/
+    }
     stages {
-        stage("Authunticate Gcloud") {
+        stage("Authinticate Gcloud") {
             steps {
                 echo "Authenticate gcloud"
-		withEnv(['GCLOUD_PATH=C:/Program Files (x86)/Google/Cloud SDK/google-cloud-sdk/bin']) {
-                //withCredentials([file(credenitialsId: 'gcloud-creds', variable: 'GCLOUD_CREDS')]){
+		        withEnv(["PATH+GCLOUD=${tool 'Gcloud-SDK'}/bin"]) {
+                withCredentials([file(credenitialsId: 'gcloud-creds', variable: 'GCLOUD_CREDS')]){
                 bat 'gcloud version'
-                //bat 'gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"'
+                bat 'gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"'
                 }
                 }
             }
+        stage("Set-up Management Plane") {
+            steps{
+                bat 'Create-Org-And-Env.bat'
+                bat 'Install-Apigee-Hybrid-Software.bat'
+                bat 'Create-Service-Account.bat'
+                bat 'Generate-TLS-Certificate.bat'
+                bat 'Configure-Cluster-ManagementPlane.bat'
+                
+            }
+        }
+         stage("Install Runtime Plane") {
+            steps{
+                bat 'Install-Apigee-Hybrid-Runtime.bat'
+            }
+        }   
     }
 }
