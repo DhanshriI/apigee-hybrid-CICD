@@ -4,11 +4,11 @@ pipeline {
         string(defaultValue: "Unit", description: 'Which environment you want to deploy?', name: 'Environment')
         choice(choices: ['Install', 'Upgrade','Rollback'], description: 'Action to perform?', name: 'Activity')
     }
-    environment {
-        CLOUDSDK_CORE_PROJECT='';
-        CLIENT_EMAIL=''
-        GCLOUD_CREDS=crdentials('gcloud-creds')
-    }
+    // environment {
+    //     CLOUDSDK_CORE_PROJECT='';
+    //     CLIENT_EMAIL=''
+    //     GCLOUD_CREDS=crdentials('gcloud-creds')
+    // }
     stages {
         stage("Authinticate Gcloud") {
             steps {
