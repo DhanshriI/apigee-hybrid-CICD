@@ -20,7 +20,6 @@ pipeline {
                 }
                 }
             }
-        }
         stage("Set-up Management Plane") {
             steps{
                 echo "Management Plane set-up"
@@ -33,6 +32,7 @@ pipeline {
                 
             }
         }
+    }
     //      stage("Install Runtime Plane") {
     //         steps{
     //             echo "Install Runtime Plane"
