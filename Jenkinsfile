@@ -25,12 +25,12 @@ pipeline {
         stage("Set-up Management Plane") {
             steps{
                 echo "Management Plane set-up"
-                bat 'test.bat'
-                bat 'Create-Org-And-Env.bat'
-                bat 'Install-Apigee-Hybrid-Software.bat'
-                bat 'Create-Service-Account.bat'
-                bat 'Generate-TLS-Certificate.bat'
-                bat 'Configure-Cluster-ManagementPlane.bat'
+                // bat 'test.bat'
+                // bat 'Create-Org-And-Env.bat'
+                // bat 'Install-Apigee-Hybrid-Software.bat'
+                // bat 'Create-Service-Account.bat'
+                // bat 'Generate-TLS-Certificate.bat'
+                // bat 'Configure-Cluster-ManagementPlane.bat'
                 
             }
         }
