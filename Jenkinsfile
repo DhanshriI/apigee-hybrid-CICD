@@ -17,7 +17,7 @@ pipeline {
 		withCredentials([file(credentialsId: 'gcloud-creds', variable: 'GCLOUD_CREDS')]) {
                 bat 'gcloud auth activate-service-account --key-file=%GCLOUD_CREDS%'
                 //bat 'gcloud config set project %GCLOUD_PROJECT%'
-                bat 'gcloud organizations list'
+                //bat 'gcloud organizations list'
 		}
                 }
             }
