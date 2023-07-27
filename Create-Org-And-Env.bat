@@ -13,7 +13,7 @@ echo $ENV_GROUP
 echo $INGRESS_DN
 
 echo Hybrid Environment
-export TOKEN=$(gcloud auth print-access-token)
+set TOKEN=$(gcloud auth print-access-token)
 curl -X POST -H "Authorization: Bearer ${TOKEN}" -H "Content-Type:application/json"  "https://apigee.googleapis.com/v1/organizations/$ORG/envgroups"  -d '{"name": "'"$ENV_GROUP"'", "hostnames":["'"$INGRESS_DN"'"]}'
 curl -X POST -H "Authorization: Bearer ${TOKEN}" -H "Content-Type:application/json"  "https://apigee.googleapis.com/v1/organizations/$ORG/envgroups/$ENV_GROUP/attachments" -d '{"environment": "'"$ENV"'"}'
 
