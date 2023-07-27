@@ -2,16 +2,8 @@
 
 echo Creating Hybrid Org
 cd ~
-// gsutil cp gs://cloud-training/CBL466/provision_hybrid_org.sh .
-chmod a+x ./provision_hybrid_org.sh
-echo $GOOGLE_CLOUD_PROJECT
-gcloud config set project [PROJECT_ID]
-./provision_hybrid_org.sh -o $GOOGLE_CLOUD_PROJECT -r us-central1
-timeout /t 300 /nobreak
 
 echo Configure env variables
-// gsutil cp gs://cloud-training/CBL466/apigee-env-test.sh ~
-source ~/apigee-env-test.sh us-central1 us-central1-a
 echo $PROJECT_ID
 echo $GCP_REGION
 echo $GCP_ZONE
