@@ -1,8 +1,5 @@
 @echo off
 
-echo Opening Cloud shell
-gcloud cloud-shell ssh
-
 echo Creating Hybrid Org
 cd ~
 gsutil cp gs://cloud-training/CBL466/provision_hybrid_org.sh .
@@ -10,6 +7,7 @@ chmod a+x ./provision_hybrid_org.sh
 echo $GOOGLE_CLOUD_PROJECT
 gcloud config set project [PROJECT_ID]
 ./provision_hybrid_org.sh -o $GOOGLE_CLOUD_PROJECT -r us-central1
+timeout /t 300 /nobreak
 
 echo Configure env variables
 gsutil cp gs://cloud-training/CBL466/apigee-env-test.sh ~

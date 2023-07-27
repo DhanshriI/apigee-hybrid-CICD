@@ -13,6 +13,7 @@ $APIGEECTL_HOME/apigeectl init -f overrides/overrides-test.yaml --dry-run=client
 
 ::Initialize installation
 $APIGEECTL_HOME/apigeectl init -f overrides/overrides-test.yaml
+timeout /t 600 /nobreak
 
 echo Verify that the cluster is ready with all components running
 $APIGEECTL_HOME/apigeectl check-ready -f overrides/overrides-test.yaml
@@ -25,6 +26,8 @@ kubectl get pods -n istio-system
 echo Install the hybrid workloads into the cluster
 $APIGEECTL_HOME/apigeectl apply -f overrides/overrides-test.yaml --dry-run=client
 $APIGEECTL_HOME/apigeectl apply -f overrides/overrides-test.yaml
+timeout /t 600 /nobreak
+
 $APIGEECTL_HOME/apigeectl check-ready -f overrides/overrides-test.yaml
 
 ::Check pods status

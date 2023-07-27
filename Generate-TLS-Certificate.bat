@@ -15,3 +15,4 @@ sudo openssl x509 -in ./certs/hybrid-cert.pem -text -noout | grep "DNS"
 
 echo Verify that the certificate is valid
 sudo openssl x509 -in ./certs/hybrid-cert.pem -text -noout | grep "Not"
+timeout /t 120 /nobreak
