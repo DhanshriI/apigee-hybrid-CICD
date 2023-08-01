@@ -12,6 +12,7 @@ pipeline {
      stages {
         stage("Authenticate Gcloud") {
             steps {
+		sh './test.sh'
                 echo "Authenticate gcloud"
 		withCredentials([file(credentialsId: 'gcloud-creds', variable: 'GCLOUD_CREDS')]) {
                 bat 'gcloud auth activate-service-account --key-file=%GCLOUD_CREDS%'
