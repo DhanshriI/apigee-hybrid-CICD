@@ -14,7 +14,10 @@ pipeline {
             steps {
                 echo "Authenticate gcloud"
 		withCredentials([file(credentialsId: 'gcloud-creds', variable: 'GCLOUD_CREDS')]) {
-                sh 'gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"'
+                sh '''
+          	gcloud version
+          	gcloud auth activate-service-account --key-file="$GCLOUD_CREDS"
+        	'''
                 }
             }
         }
