@@ -21,7 +21,7 @@ pipeline {
 	stage("Set-up Management Plane") {
             steps{
                 echo "Management Plane set-up"
-                sh 'Create-Org-And-Env.sh'
+                bat 'Create-Org-And-Env.bat'
                 sh 'Install-Apigee-Hybrid-Software.sh'
                 sh 'Create-Service-Account.sh'
                 sh 'Generate-TLS-Certificate.sh'
