@@ -21,13 +21,13 @@ pipeline {
 	stage("Set-up Management Plane") {
             steps{
                 echo "Management Plane set-up"
-                sh 'test.sh'
                 sh 'Create-Org-And-Env.sh'
                 sh 'Install-Apigee-Hybrid-Software.sh'
                 sh 'Create-Service-Account.sh'
                 sh 'Generate-TLS-Certificate.sh'
                 sh 'Configure-Cluster-ManagementPlane.sh'
 		sh 'Install-Apigee-Hybrid-Runtime.sh'
+		echo "Installation completed"
             }
         }
      }
