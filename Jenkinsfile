@@ -13,21 +13,22 @@ pipeline {
         stage("Authenticate Gcloud") {
             steps {
                 echo "Authenticate gcloud"
-		withCredentials([file(credentialsId: 'gcloud-creds', variable: 'GCLOUD_CREDS')]) {
-                bat 'gcloud auth activate-service-account --key-file=%GCLOUD_CREDS%'
+		//withCredentials([file(credentialsId: 'gcloud-creds', variable: 'GCLOUD_CREDS')]) {
+                //bat 'gcloud auth activate-service-account --key-file=%GCLOUD_CREDS%'
                 }
             }
         }
 	stage("Set-up Management Plane") {
             steps{
                 echo "Management Plane set-up"
-                bat 'Create-Org-And-Env.bat'
-                sh 'Install-Apigee-Hybrid-Software.sh'
-                sh 'Create-Service-Account.sh'
-                sh 'Generate-TLS-Certificate.sh'
-                sh 'Configure-Cluster-ManagementPlane.sh'
-		sh 'Install-Apigee-Hybrid-Runtime.sh'
-		echo "Installation completed"
+		    sh './test.sh'
+  //               sh 'Create-Org-And-Env.sh'
+  //               sh 'Install-Apigee-Hybrid-Software.sh'
+  //               sh 'Create-Service-Account.sh'
+  //               sh 'Generate-TLS-Certificate.sh'
+  //               sh 'Configure-Cluster-ManagementPlane.sh'
+		// sh 'Install-Apigee-Hybrid-Runtime.sh'
+		// echo "Installation completed"
             }
         }
      }
