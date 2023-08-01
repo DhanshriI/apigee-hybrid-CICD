@@ -21,7 +21,7 @@ pipeline {
 	stage("Set-up Management Plane") {
             steps{
                 echo "Management Plane set-up"
-                sh 'test.bat'
+                sh 'test.sh'
                 sh 'Create-Org-And-Env.sh'
                 sh 'Install-Apigee-Hybrid-Software.sh'
                 sh 'Create-Service-Account.sh'
