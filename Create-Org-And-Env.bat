@@ -5,7 +5,7 @@ cd ~
 
 chmod a+x ./provision_hybrid_org.sh
 echo $GOOGLE_CLOUD_PROJECT
-gcloud config set project qwiklabs-gcp-03-87bb34bf0144
+gcloud config set project qwiklabs-gcp-04-74922148a738
 ./provision_hybrid_org.sh -o $GOOGLE_CLOUD_PROJECT -r us-central1
 timeout /t 300 /nobreak
 
