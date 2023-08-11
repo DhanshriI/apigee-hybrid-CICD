@@ -7,7 +7,7 @@ chmod a+x ./provision_hybrid_org.sh
 export GOOGLE_CLOUD_PROJECT=qwiklabs-gcp-02-ae6124e90b8b
 echo $GOOGLE_CLOUD_PROJECT
 ./provision_hybrid_org.sh -o $GOOGLE_CLOUD_PROJECT -r us-central1
-timeout /t 200 /nobreak
+sleep 200
 
 echo Configure env variables
 gsutil cp gs://cloud-training/CBL466/apigee-env-test.sh ~
