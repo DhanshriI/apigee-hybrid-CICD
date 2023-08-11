@@ -28,4 +28,4 @@ ln -s $APIGEECTL_HOME/config config
 ln -s $APIGEECTL_HOME/templates templates
 ln -s $APIGEECTL_HOME/plugins plugins
 ls -al
-timeout /t 120 /nobreak
+sleep
