@@ -4,7 +4,6 @@ echo Creating Hybrid Org
 cd ~
 gsutil cp gs://cloud-training/CBL466/provision_hybrid_org.sh .
 chmod a+x ./provision_hybrid_org.sh
-gcloud config set project qwiklabs-gcp-00-d363729da7f3
 ./provision_hybrid_org.sh -o $GOOGLE_CLOUD_PROJECT -r us-central1
 timeout /t 200 /nobreak
 
