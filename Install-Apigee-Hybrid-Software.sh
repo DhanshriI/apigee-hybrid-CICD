@@ -8,8 +8,8 @@ tar xvzf apigeectl_linux_64.tar.gz -C ~/apigee
 
 echo Set up the directories
 cd ~/apigee
-sudo mv apigeectl* apigeectl.1.6.4
-sudo ln -s apigeectl.1.6.4 apigeectl
+mv apigeectl* apigeectl.1.6.4
+ln -s apigeectl.1.6.4 apigeectl
 export APIGEECTL_HOME=~/apigee/apigeectl; 
 echo $APIGEECTL_HOME
 cd ~; 
@@ -28,4 +28,4 @@ ln -s $APIGEECTL_HOME/config config
 ln -s $APIGEECTL_HOME/templates templates
 ln -s $APIGEECTL_HOME/plugins plugins
 ls -al
-sleep
+sleep 120
