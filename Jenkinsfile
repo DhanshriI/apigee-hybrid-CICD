@@ -5,7 +5,7 @@ pipeline {
         choice(choices: ['Install', 'Upgrade','Rollback'], description: 'Action to perform?', name: 'Activity')
     }
     environment {
-        CLOUDSDK_CORE_PROJECT='qwiklabs-gcp-02-ae6124e90b8b';
+        CLOUDSDK_CORE_PROJECT='qwiklabs-gcp-00-f9ad8efada85';
         //CLIENT_EMAIL=''
         //GCLOUD_CREDS=crdentials('gcloud-creds')
     }
