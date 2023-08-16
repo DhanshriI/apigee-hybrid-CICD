@@ -4,7 +4,7 @@ echo Creating Hybrid Org
 cd ~
 gsutil cp gs://cloud-training/CBL466/provision_hybrid_org.sh .
 chmod a+x ./provision_hybrid_org.sh
-export GOOGLE_CLOUD_PROJECT=qwiklabs-gcp-00-f9ad8efada85
+export GOOGLE_CLOUD_PROJECT=qwiklabs-gcp-00-eea2df8054cf
 echo $GOOGLE_CLOUD_PROJECT
 ./provision_hybrid_org.sh -o $GOOGLE_CLOUD_PROJECT -r us-central1
 
