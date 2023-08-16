@@ -28,6 +28,6 @@ curl -X POST -H "Authorization: Bearer ${TOKEN}" -H "Content-Type:application/js
 curl -X POST -H "Authorization: Bearer ${TOKEN}" -H "Content-Type:application/json"  "https://apigee.googleapis.com/v1/organizations/$ORG/envgroups/$ENV_GROUP/attachments" -d '{"environment": "'"$ENV"'"}'
 
 echo Authenticate apigee cluster
-gcloud container clusters get-credentials apigee-hybrid
+gcloud container clusters get-credentials apigee-hybrid-cluster --zone us-central1-a
 kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user $(gcloud config get-value account)
 echo; echo "gcloud container clusters get-credentials apigee-hybrid" >> ~/.profile
