@@ -14,6 +14,10 @@ ln -s apigeectl.1.6.4 apigeectl
 export APIGEECTL_HOME=~/apigee/apigeectl; 
 echo $APIGEECTL_HOME
 cd ~; 
+echo "---------------------------"
+echo "Apigeeclt version"
+./apigeectl version
+echo "---------------------------"
 $APIGEECTL_HOME/apigeectl version
 ls -al apigee
 
