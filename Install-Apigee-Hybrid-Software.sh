@@ -14,12 +14,12 @@ ln -s apigeectl.1.6.4 apigeectl
 export APIGEECTL_HOME=~/apigee/apigeectl; 
 echo $APIGEECTL_HOME
 cd ~; 
-echo "---------------------------"
-echo "Apigeeclt version"
-./apigeectl version
-echo "---------------------------"
 $APIGEECTL_HOME/apigeectl version
 ls -al apigee
+echo "---------------------------"
+echo "Apigeectl version"
+./apigeectl version
+echo "---------------------------"
 
 echo Update the setup script
 cat >> ~/apigee-env-test.sh << EOF export APIGEECTL_HOME=~/apigee/apigeectl alias apigeectl=$APIGEECTL_HOME/apigeectl EOF
