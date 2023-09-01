@@ -3,6 +3,7 @@
 echo Download Apigee hybrid distribution for 64-bit linux OS
 cd ~
 curl -LO https://storage.googleapis.com/apigee-release/hybrid/apigee-hybrid-setup/1.6.4/apigeectl_linux_64.tar.gz
+rm -r ~/apigee
 mkdir ~/apigee
 tar xvzf apigeectl_linux_64.tar.gz -C ~/apigee
 
