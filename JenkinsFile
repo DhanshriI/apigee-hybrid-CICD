@@ -8,13 +8,14 @@ pipeline {
         stage("Initialize") {
             steps {
                     echo "Deployment of APi proxy started"
-                    sh 'mvn -f C:/ProgramData/Jenkins/.jenkins/workspace/Apigee-Proxy-Deploy/api-proxy-deploy/mvaen-deploy/pom.xml clean install'
+                   // sh 'mvn -f C:\ProgramData\Jenkins\.jenkins\workspace\Apigee-Proxy-Deploy\api-proxy-deploy\mvaen-deploy\pom.xml clean install'
                   }
         }
 	    stage("Deploy API Proxy") {
             steps{
-                sh 'mvn install -Ptest -Dusername=dhanshri.ingole@cognizant.com -Dpassword=Banglore@2023 -Dorg=apac-sg-partner06'
+                sh 'mvn -f C:\ProgramData\Jenkins\.jenkins\workspace\Apigee-Proxy-Deploy\api-proxy-deploy\mvaen-deploy\pom.xml clean install -Ptest -Dusername=dhanshri.ingole@cognizant.com -Dpassword=Banglore@2023 -Dorg=apac-sg-partner06'
             }
         }
     }
+
 }
