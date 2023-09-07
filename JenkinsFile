@@ -13,7 +13,7 @@ pipeline {
         }
 	    stage("Deploy API Proxy") {
             steps{
-                sh 'mvn -f $workspace\pom.xml clean install -Ptest -Dusername=dhanshri.ingole@cognizant.com -Dpassword=Banglore@2023 -Dorg=apac-sg-partner06'
+                sh 'mvn -f $workspace/pom.xml clean install -Ptest -Dusername=dhanshri.ingole@cognizant.com -Dpassword=Banglore@2023 -Dorg=apac-sg-partner06'
             }
         }
     }
