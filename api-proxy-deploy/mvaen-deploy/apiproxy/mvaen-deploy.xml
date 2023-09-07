@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="mvaen-deploy">
+    <Basepaths>/mvaen-deploy</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1694078533130</CreatedAt>
+    <CreatedBy>dhanshri.ingole@gmail.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>mvaen-deploy</DisplayName>
+    <LastModifiedAt>1694078719573</LastModifiedAt>
+    <LastModifiedBy>dhanshri.ingole@gmail.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:ee13750662e20a8bc127d48aee8f1713a106e3d86e89b28ccb1911c4fb99ac30ea5425187d474bc3b4097c6fea8567a7adb172a4e78c54ae9d853dcbcd24d8fe</ManifestVersion>
+    <Policies>
+        <Policy>OAuth-v20-1</Policy>
+        <Policy>Quota-1</Policy>
+        <Policy>Spike-Arrest-1</Policy>
+        <Policy>Verify-API-Key-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
