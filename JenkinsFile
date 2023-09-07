@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    tools { 
+        maven 'MAVEN' 
+        jdk 'JAVA_JDK' 
+    }
+    stages {
+        stage("Initialize") {
+            steps {
+                    echo "Deployment of APi proxy started"
+                  }
+        }
+	    stage("Deploy API Proxy") {
+            steps{
+                sh 'mvn install -Ptest -Dusername=dhanshri.ingole@cognizant.com -Dpassword=Banglore@2023 -Dorg=apac-sg-partner06'
+            }
+        }
+    }
+}
