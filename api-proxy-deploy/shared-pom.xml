@@ -95,42 +95,7 @@
                 <groupId>com.apigee.edge.config</groupId>
                 <artifactId>apigee-config-maven-plugin</artifactId>
                 <version>1.5.3</version>
-                <executions>
-                	<execution>
-                        <id>create-config-specs</id>
-                        <phase>verify</phase>                        
-                        <goals>
-                            <goal>specs</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>create-config-cache</id>
-                        <phase>verify</phase>                        
-                        <goals>
-                            <goal>caches</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>create-config-keystores</id>
-                        <phase>verify</phase>                        
-                        <goals>
-                            <goal>keystores</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>create-config-aliases</id>
-                        <phase>verify</phase>                        
-                        <goals>
-                            <goal>aliases</goal>
-                        </goals>
-                    </execution>
-                     <execution>
-                        <id>create-config-references</id>
-                        <phase>verify</phase>                        
-                        <goals>
-                            <goal>references</goal>
-                        </goals>
-                    </execution>
+                <executions>	
                     <execution>
                         <id>create-config-targetserver</id>
                         <phase>verify</phase>                        
