@@ -28,20 +28,6 @@
                 <artifactId>apigee-config-maven-plugin</artifactId>
                 <version>1.5.3</version>
                 <executions>
-                	<execution>
-                        <id>create-config-specs</id>
-                        <phase>install</phase>                        
-                        <goals>
-                            <goal>specs</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>create-config-cache</id>
-                        <phase>install</phase>                        
-                        <goals>
-                            <goal>caches</goal>
-                        </goals>
-                    </execution>
                     <execution>
                         <id>create-config-kvm</id>
                         <phase>install</phase>                        
