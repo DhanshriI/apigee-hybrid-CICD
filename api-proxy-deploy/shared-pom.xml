@@ -97,8 +97,15 @@
                 <version>1.5.3</version>
                 <executions>	
                     <execution>
+                        <id>create-config-kvm</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>keyvaluemaps</goal>
+                        </goals>
+                    </execution>
+                    <execution>
                         <id>create-config-targetserver</id>
-                        <phase>verify</phase>                        
+                        <phase>install</phase>                        
                         <goals>
                             <goal>targetservers</goal>
                         </goals>
